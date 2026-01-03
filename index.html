@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Arnav Sharma, a Financial Analyst specializing in Credit Risk, EWS Frameworks, and Financial Modeling." />
+    <meta name="keywords" content="financial analyst, credit risk, financial modeling, EWS frameworks, portfolio management, finance professional" />
+    <meta name="author" content="Arnav Sharma" />
+    <meta name="robots" content="index, follow" />
+    <title>Arnav Sharma | Financial Analyst & Credit Risk Professional</title>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arnav-sharma-portfolio.com" />
+    <meta property="og:title" content="Arnav Sharma | Financial Analyst & Credit Risk Professional" />
+    <meta property="og:description" content="Portfolio of Arnav Sharma, a Financial Analyst specializing in Credit Risk, EWS Frameworks, and Financial Modeling." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Arnav Sharma | Financial Analyst & Credit Risk Professional" />
+    <meta property="twitter:description" content="Portfolio of Arnav Sharma, a Financial Analyst specializing in Credit Risk, EWS Frameworks, and Financial Modeling." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Register Service Worker for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
